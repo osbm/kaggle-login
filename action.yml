@@ -14,7 +14,7 @@ inputs:
 
   kaggle_key:
     description:
-      "The kaggle access API token to learn more visit https://github.com/Kaggle/kaggle-api#api-credentials"
+      "The kaggle access API token to learn more visit https://github.com/Kaggle/kaggle-api#api-credentials "
     required: true
     default: ""
 
