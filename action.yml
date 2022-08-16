@@ -1,0 +1,23 @@
+name: Kaggle Login
+description: "Login to Kaggle"
+author: osbm
+branding:
+  icon: upload-cloud
+  color: blue
+
+inputs:
+  kaggle_username:
+    description:
+      "The kaggle username"
+    required: true
+    default: ""
+
+  kaggle_key:
+    description:
+      "The kaggle access API token to learn more visit https://github.com/Kaggle/kaggle-api#api-credentials"
+    required: true
+    default: ""
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
