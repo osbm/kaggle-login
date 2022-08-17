@@ -21,6 +21,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Print username
-      run: echo ${{ inputs.kaggle_username }}
+    - name: Print current directory
+      run: |
+        pwd && ls
       shell: bash
