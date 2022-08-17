@@ -21,6 +21,10 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Install kaggle
+      run: |
+        pip install kaggle
+
     - name: Authenticate to Kaggle
       run: |
         echo '{
@@ -28,5 +32,4 @@ runs:
           "key": "${{input.kaggle_key}}"
         }' > kaggle.json
         mv kaggle.json ~/.kaggle/
-        chmod 600 ~/.kaggle/kaggle.json
         echo "Kaggle login successful"
