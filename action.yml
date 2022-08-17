@@ -22,5 +22,5 @@ runs:
   using: "composite"
   steps:
     - name: Print username
-      run: echo ${{ kaggle_username }}
+      run: echo ${{ inputs.kaggle_username }}
       shell: bash
