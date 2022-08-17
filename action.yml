@@ -19,5 +19,7 @@ inputs:
     default: ""
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "composite"
+  steps:
+    - name: Print username
+      run: echo "{{ kaggle_username }}"
