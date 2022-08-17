@@ -21,7 +21,12 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Print current directory
+    - name: Authenticate to Kaggle
       run: |
-        pwd && ls
-      shell: bash
+        echo '{
+          "username": "${{input.kaggle_username}}",
+          "key": "${{input.kaggle_key}}"
+        }' > kaggle.json
+        mv kaggle.json ~/.kaggle/
+        chmod 600 ~/.kaggle/kaggle.json
+        echo "Kaggle login successful"
