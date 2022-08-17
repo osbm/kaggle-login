@@ -19,5 +19,17 @@ inputs:
     default: ""
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "composite"
+  steps:
+    - name: Install kaggle
+      run: |
+        pip install kaggle
+
+    - name: Authenticate to Kaggle
+      run: |
+        echo '{
+          "username": "${{input.kaggle_username}}",
+          "key": "${{input.kaggle_key}}"
+        }' > kaggle.json
+        mv kaggle.json ~/.kaggle/
+        echo "Kaggle login successful"
