@@ -1,5 +1,6 @@
 # A github action to login to kaggle
 
+This is a very simple composite action that install kaggle and logs into kaggle.
 
 You need to set the username and the key as repository secrets.
 
