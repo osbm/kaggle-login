@@ -22,10 +22,12 @@ runs:
   using: "composite"
   steps:
     - name: Install kaggle
+      shell: bash
       run: |
         pip install kaggle
 
     - name: Authenticate to Kaggle
+      shell: bash
       run: |
         echo '{
           "username": "${{input.kaggle_username}}",
