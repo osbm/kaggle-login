@@ -33,5 +33,6 @@ runs:
           "username": "${{ inputs.kaggle_username }}",
           "key": "${{ inputs.kaggle_key }}"
         }' > kaggle.json
+        mkdir -p ~/.kaggle
         mv kaggle.json ~/.kaggle/
         echo "Kaggle login successful"
