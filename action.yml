@@ -30,8 +30,8 @@ runs:
       shell: bash
       run: |
         echo '{
-          "username": "${{input.kaggle_username}}",
-          "key": "${{input.kaggle_key}}"
+          "username": "${{ inputs.kaggle_username }}",
+          "key": "${{ inputs.kaggle_key }}"
         }' > kaggle.json
         mv kaggle.json ~/.kaggle/
         echo "Kaggle login successful"
