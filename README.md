@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Login to Kaggle
-      - uses: osbm/kaggle-login@test-composite
+      - uses: osbm/kaggle-login@main
         with:
           KAGGLE_USERNAME: {{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: {{ secrets.KAGGLE_KEY }}
